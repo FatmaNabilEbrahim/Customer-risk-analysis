@@ -1,23 +1,5 @@
-# Pwc Switzerland Power BI virtual case experience - Customer Risk Analysis
-<img align="right" alt="Customer Risk Analysis" width="1000" height = "500" src="https://user-images.githubusercontent.com/106287208/194933469-e31e05b4-9c23-48d7-96fe-ae0ecdd25897.png">
+# Telco Customer Churn Analysis Power BI virtual case experience - Customer Risk Analysis
 
----
-
-
-# Table of Contents
-
-- [Problem Statement](https://github.com/globalsmile/Customer-Risk-Analysis#Problem-Statement)
-- [Data Sourcing](https://github.com/globalsmile/Customer-Risk-Analysis#Data-Sourcing)
-- [Data Preparation](https://github.com/globalsmile/Customer-Risk-Analysis#Data-Preparation)
-- [Data Modeling](https://github.com/globalsmile/Customer-Risk-Analysis#Data-Modeling)
-- [Data Visualization](https://github.com/globalsmile/Customer-Risk-Analysis#Data-Visualization)
-- [Data Analysis](https://github.com/globalsmile/Customer-Risk-Analysis#Data-Analysis)
-- [Insights](https://github.com/globalsmile/Customer-Risk-Analysis#Insights)
-- [Recommendation](https://github.com/globalsmile/Customer-Risk-Analysis#Recommendation)
-- [Shareable link](https://github.com/globalsmile/Customer-Risk-Analysis#Shareable-Link)
-
-
----
 
 # Problem Statement
 
@@ -39,9 +21,8 @@ and number of tickets opened in the categories administrative and technical
 
 # Data Sourcing
 
-The Dataset used for this analysis was presented by [Pwc Switzerland](https://www.pwc.ch/en/careers-with-pwc/students/virtual-case-experience.html) and available at:
+The Dataset used for this analysis was presented by [telco-customer-churn](https://www.kaggle.com/datasets/ylchang/telco-customer-churn-1113) and available at:
 
-- [Churn Dataset](https://github.com/globalsmile/Customer-Risk-Analysis/blob/main/02%20Churn-Dataset.xlsx)
 
 
 
@@ -53,7 +34,7 @@ Data transformation was done in Power Query and the dataset was loaded into Micr
 
 The customer retention dataset is given by a table named:
 
-- `churn` which has `23 columns and 7043 rows` of observation
+- `churn` , `status` , `services` ,`demographics` which has `30 columns and 7043 rows` of observation
 
 
 The tabulation below shows the `churn` table with its column names and their description:
@@ -105,40 +86,34 @@ Further cleansing was done as follows:
 
 After the dataset was cleaned and transformed, it was ready to be modeled.
 
-- A one-to-many (*:1) relationship was created between the `churn` and the `churn - unpivot groups` tables using the customerId column in each of the tables
+- A one-to-many (*:1) relationship was created between the `churn` , `demgraphics` , `status` and `services` tables using the customerId column in each of the tables
 - The relationship formed in the data model is shown below:
 
-<img align="right" alt="Data Model" width="1000" height = "400" src="https://user-images.githubusercontent.com/106287208/194932956-140622b5-f861-4220-80cf-6a57c080b983.JPG">
+
+![model](https://github.com/FatmaNabilEbrahim/Customer-risk-analysis/assets/105246862/50532bbc-fea3-494f-b922-20d64e27333b)
 
 
 ---
 
 # Data Visualization
 
-Data visualization for the dataset was done in 3 folds using Microsoft Power BI Desktop:
+Data visualization for the dataset was done in 2 folds using Microsoft Power BI Desktop:
 
--  The `Welcome` Page: Shows recommendations and a short insight on the report
 -  The `Churn` Page: Shows the churn dashboad containing # of customers at risk, # of Tech Tickets, # of Admin Ticket, Yearly Charges, Monthly charges, Demographics, e.t.c 
 -  The `Customer Risk Analysis` Page: Shows the # of customers, the churn rate, churn by type of internet service, type of contract, e.t.c
 
-Figure 1 shows visualizations from `Welcome` page
+
+Figure 1 shows visualizations from `Churn` page
 
 | Figure 1 |
 | ----------- |
-| ![image](https://user-images.githubusercontent.com/106287208/194933273-39523822-31dd-46b7-80e7-153273d5a599.png) |
+![dashboard](https://github.com/FatmaNabilEbrahim/Customer-risk-analysis/assets/105246862/84ea4332-bd8d-447a-a383-dbcddc67f3c6)
 
-Figure 2 shows visualizations from `Churn` page
+Figure 2 shows visualizations from `Customer Risk Analysis` page
 
 | Figure 2 |
 | ----------- |
-| ![image](https://user-images.githubusercontent.com/106287208/194933469-e31e05b4-9c23-48d7-96fe-ae0ecdd25897.png) |
-
-Figure 3 shows visualizations from `Customer Risk Analysis` page
-
-| Figure 3 |
-| ----------- |
-| ![image](https://user-images.githubusercontent.com/106287208/194933633-d0089c62-02fd-4f39-9bf0-3ef5ca08be4b.png) |
-
+![risk](https://github.com/FatmaNabilEbrahim/Customer-risk-analysis/assets/105246862/5eaed7a7-90ee-4069-bb17-112af2865b46)
 
 ---
 
@@ -249,11 +224,12 @@ As shown from [Data Visualization](https://github.com/globalsmile/Customer-Risk-
 
 # Insights
 
-As shown by [Data Visualization](https://github.com/globalsmile/Customer-Risk-Analysis#Data-Visualization), It can be deduced that:
+As shown by the figures It can be deduced that:
 
 - `2955` tech tickets were opened
 - `3632` admin tickets were opened
 - The monthly charges is `$456.12K` 
+- more insights can be detected too 
 
 ---
 
@@ -265,12 +241,3 @@ As shown by [Data Visualization](https://github.com/globalsmile/Customer-Risk-An
 
 - Yearly increase of automatic payments by 5%
 
-
----
-
-
-# Shareable Link
-
-You can interact with the report here: 
-
-[View Report](https://app.powerbi.com/view?r=eyJrIjoiMjg1NGRmN2UtYzVkNC00MmM5LWI4MWItNzhjYjhhOWU0ZWQwIiwidCI6IjQ5ODY4YWYzLWNjNWYtNDIxNC04YjdmLTQwZjM3NDY0OWEwOSJ9)
