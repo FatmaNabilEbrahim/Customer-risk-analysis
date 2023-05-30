@@ -1,4 +1,5 @@
 # Telco Customer Churn Analysis Power BI virtual case experience - Customer Risk Analysis
+![dashboard](https://github.com/FatmaNabilEbrahim/Customer-risk-analysis/assets/105246862/bb89c5f1-203f-4e0d-8084-558b14453304)
 
 
 # Problem Statement
